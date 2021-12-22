@@ -1,0 +1,228 @@
+{
+	"info": {
+		"_postman_id": "ff448998-8ca6-4bad-ba65-ccf54620e190",
+		"name": "Money-Hub",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get-Token",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic Y2YzNGRjMjUtNzhjNy00ZmMxLWJmMGMtY2I1NDBiNDgwNWQwOmIyOTQ2NWUwLWJkNDYtNDAyYi1hYzc1LWViNTMyN2U3NGQ2ZA=="
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "code",
+							"value": "example-auth-code",
+							"type": "text"
+						},
+						{
+							"key": "grant_type",
+							"value": "authorization_code",
+							"type": "text"
+						},
+						{
+							"key": "redirect_uri",
+							"value": "https://dev-box.finoxy.io",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://identity.moneyhub.co.uk/oidc/token",
+					"protocol": "https",
+					"host": [
+						"identity",
+						"moneyhub",
+						"co",
+						"uk"
+					],
+					"path": [
+						"oidc",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get-Accounts",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlRxVk1laV9XdUtqZW5HWlJUbnJpeUxXRnZuS2tzTjNvLWFuWXBqS0JEbVUifQ.eyJqdGkiOiJnaGhzREV-ck53VldVYkxYMHRSYl8iLCJzdWIiOiI2MWJmMjM2NTFiNjA5ZDNlOGU0ODlkNjciLCJpc3MiOiJodHRwczovL2lkZW50aXR5Lm1vbmV5aHViLmNvLnVrL29pZGMiLCJpYXQiOjE2Mzk5MTY0MjMsImV4cCI6MTYzOTkyMzYyMywic2NvcGUiOiJvcGVuaWQgaWQ6MWZmZTcwNGQzOTYyOWE5MjljOGUyOTM4ODBmYjQ0OWEgYWNjb3VudHM6cmVhZCIsImNsYWltcyI6eyJpZF90b2tlbiI6eyJtaDpjb25faWQiOnsiZXNzZW50aWFsIjp0cnVlfX0sInJlamVjdGVkIjpbXX0sImF1ZCI6ImNmMzRkYzI1LTc4YzctNGZjMS1iZjBjLWNiNTQwYjQ4MDVkMCJ9.T5vTznY4Zy3rwpTIupKILU0ceiY_6nkQB0sj5ThiftYPcAa1wwzbh4CYYi7o-1b8hcJ_KhW-fFsLgiVRuVLjo2eviPZJcYVQGPHI2lE1WVL2gM-i-aigbUroDrzcWISLwfgCZc-0zGI5aB8xBa_SVxpDEHYCPS8MTgCxhSYu2BL5kJMIRRD5nfeonOE3j_kTc_h8BxBo4lrY7aPd1InL8T1SE_x_weg6FapXY7P-svvsSj3MtXEF90zK4fcc1QImAyjC2gOJ0wzQTXZa8Nf9m73Q3a6sMDgZjoODio0GGHTfEE-2ELA_Tz8peKnI_SrHIdVEtIXfsBwaZzkZR9Q0kA\",\"expires_in\":7200,\"id_token\":\"eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlRxVk1laV9XdUtqZW5HWlJUbnJpeUxXRnZuS2tzTjNvLWFuWXBqS0JEbVUifQ.eyJzdWIiOiI2MWJmMjM2NTFiNjA5ZDNlOGU0ODlkNjciLCJtaDpjb25faWQiOiIxZmZlNzA0ZDM5NjI5YTkyOWM4ZTI5Mzg4MGZiNDQ5YTozMmNiMDhlMy05NWJlLTRmYzYtOGMzYi04MGQzZDBlNmY4ZmUiLCJhdF9oYXNoIjoialRsYUVBMnZtWVVfbVhPS2JwWnF0ZyIsInNpZCI6ImVjMzk0MWU1LTk4ZDQtNDE5ZS1iYzEzLWVmYWQ4YjE3NzZhZiIsImF1ZCI6ImNmMzRkYzI1LTc4YzctNGZjMS1iZjBjLWNiNTQwYjQ4MDVkMCIsImV4cCI6MTYzOTkyMDAyNiwiaWF0IjoxNjM5OTE2NDI2LCJpc3MiOiJodHRwczovL2lkZW50aXR5Lm1vbmV5aHViLmNvLnVrL29pZGMifQ.Le-oWNl6adMLyevCQFX3p_VVVSMAm9S6cRtsgBtz8w4xXT8ww0am1wVGR3yfAhhkDyeOXDMB_X3MRvDuqfPsEt9xMwNXrvdVvc21Fhy3cWkl40zYtNI0K3-UVeMUcb3473-53IEHP6V3vfo3KMn41Mlippjrx5jmYyeysVSuknqjOLtevtS9U61-LEHQGmE-MKq0ftiwew4MRzTSXjSaKg_Q5iIhVXk3CciD2LUpxA8vlpVPH9CQXwUU255iFtxFJlZlLJQtFQaLgTzLCcIEP-ijgcsYc5xN-R-T7fY6Ix1Bl73ahVOZw9wxEDR-0E5R8TffywVOBQ_4dCdaOHPfSg"
+					}
+				],
+				"url": {
+					"raw": "https://api.moneyhub.co.uk/v2.0/accounts",
+					"protocol": "https",
+					"host": [
+						"api",
+						"moneyhub",
+						"co",
+						"uk"
+					],
+					"path": [
+						"v2.0",
+						"accounts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get-Accounts-Balances",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlRxVk1laV9XdUtqZW5HWlJUbnJpeUxXRnZuS2tzTjNvLWFuWXBqS0JEbVUifQ.eyJqdGkiOiI2R1NoMHMzVjlISG1ybkRwbHdzT3EiLCJzdWIiOiI2MWJmMjU3NTc3MjgxNjgzMWU1ZDhhMjMiLCJpc3MiOiJodHRwczovL2lkZW50aXR5Lm1vbmV5aHViLmNvLnVrL29pZGMiLCJpYXQiOjE2Mzk5MTY5NjUsImV4cCI6MTYzOTkyNDE2NSwic2NvcGUiOiJvcGVuaWQgaWQ6MWZmZTcwNGQzOTYyOWE5MjljOGUyOTM4ODBmYjQ0OWEgYWNjb3VudHM6cmVhZCIsImNsYWltcyI6eyJpZF90b2tlbiI6eyJtaDpjb25faWQiOnsiZXNzZW50aWFsIjp0cnVlfX0sInJlamVjdGVkIjpbXX0sImF1ZCI6ImNmMzRkYzI1LTc4YzctNGZjMS1iZjBjLWNiNTQwYjQ4MDVkMCJ9.INmE-bLC2srLGHIWiQ4GDLDezGAWlcZ19I2yHNV9w8uMvqnY7jlZBpNWvWy8Xh9HjyHdXXEg8tdZmQLZ43d0SUd9oae_MTddGjfb_d0mQrxF9UjecFpO-fxGy4aEXw9vF5RgtdZsfAVFf0sfRsPvs7_whpXfo_WvxaaCjLzFGnJb4U6wDoU7PAD8gtjcxQ3ygOdH1xeOyjLK43dpMYxICU4VDaIg6Z8JWnA3xPww-eUn4fAz8dwnXGdJWmPoyPx_LGxUyvZlvOWnv3v1MYTykxzBxqQVNfYxfRnJaBS4GLkCUFuBtQPjEx7BrrGktYFRBMIHvzzUwyob5isAkisvaQ"
+					}
+				],
+				"url": {
+					"raw": "https://api.moneyhub.co.uk/v2.0/accounts/fcb7e00f-9a9e-4948-a507-1f7e349e240e/balances",
+					"protocol": "https",
+					"host": [
+						"api",
+						"moneyhub",
+						"co",
+						"uk"
+					],
+					"path": [
+						"v2.0",
+						"accounts",
+						"fcb7e00f-9a9e-4948-a507-1f7e349e240e",
+						"balances"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Retrieve-single-account",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlRxVk1laV9XdUtqZW5HWlJUbnJpeUxXRnZuS2tzTjNvLWFuWXBqS0JEbVUifQ.eyJqdGkiOiI2R1NoMHMzVjlISG1ybkRwbHdzT3EiLCJzdWIiOiI2MWJmMjU3NTc3MjgxNjgzMWU1ZDhhMjMiLCJpc3MiOiJodHRwczovL2lkZW50aXR5Lm1vbmV5aHViLmNvLnVrL29pZGMiLCJpYXQiOjE2Mzk5MTY5NjUsImV4cCI6MTYzOTkyNDE2NSwic2NvcGUiOiJvcGVuaWQgaWQ6MWZmZTcwNGQzOTYyOWE5MjljOGUyOTM4ODBmYjQ0OWEgYWNjb3VudHM6cmVhZCIsImNsYWltcyI6eyJpZF90b2tlbiI6eyJtaDpjb25faWQiOnsiZXNzZW50aWFsIjp0cnVlfX0sInJlamVjdGVkIjpbXX0sImF1ZCI6ImNmMzRkYzI1LTc4YzctNGZjMS1iZjBjLWNiNTQwYjQ4MDVkMCJ9.INmE-bLC2srLGHIWiQ4GDLDezGAWlcZ19I2yHNV9w8uMvqnY7jlZBpNWvWy8Xh9HjyHdXXEg8tdZmQLZ43d0SUd9oae_MTddGjfb_d0mQrxF9UjecFpO-fxGy4aEXw9vF5RgtdZsfAVFf0sfRsPvs7_whpXfo_WvxaaCjLzFGnJb4U6wDoU7PAD8gtjcxQ3ygOdH1xeOyjLK43dpMYxICU4VDaIg6Z8JWnA3xPww-eUn4fAz8dwnXGdJWmPoyPx_LGxUyvZlvOWnv3v1MYTykxzBxqQVNfYxfRnJaBS4GLkCUFuBtQPjEx7BrrGktYFRBMIHvzzUwyob5isAkisvaQ"
+					}
+				],
+				"url": {
+					"raw": "https://api.moneyhub.co.uk/v2.0/accounts/fcb7e00f-9a9e-4948-a507-1f7e349e240e",
+					"protocol": "https",
+					"host": [
+						"api",
+						"moneyhub",
+						"co",
+						"uk"
+					],
+					"path": [
+						"v2.0",
+						"accounts",
+						"fcb7e00f-9a9e-4948-a507-1f7e349e240e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get_Transaction",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlRxVk1laV9XdUtqZW5HWlJUbnJpeUxXRnZuS2tzTjNvLWFuWXBqS0JEbVUifQ.eyJqdGkiOiJ4SmJTfldDdjBFelpjM3cyNnZ6STAiLCJzdWIiOiI2MWJmMmU3MDBiMWE3NmVjNjY1NmY1MjAiLCJpc3MiOiJodHRwczovL2lkZW50aXR5Lm1vbmV5aHViLmNvLnVrL29pZGMiLCJpYXQiOjE2Mzk5MTkyNDQsImV4cCI6MTYzOTkyNjQ0NCwic2NvcGUiOiJvcGVuaWQgaWQ6MWZmZTcwNGQzOTYyOWE5MjljOGUyOTM4ODBmYjQ0OWEgYWNjb3VudHM6cmVhZCB0cmFuc2FjdGlvbnM6cmVhZDphbGwiLCJjbGFpbXMiOnsiaWRfdG9rZW4iOnsibWg6Y29uX2lkIjp7ImVzc2VudGlhbCI6dHJ1ZX19LCJyZWplY3RlZCI6W119LCJhdWQiOiJjZjM0ZGMyNS03OGM3LTRmYzEtYmYwYy1jYjU0MGI0ODA1ZDAifQ.RwkQVu7ip4AWCLCRy3_3STyyDZC6f_v3w1trApz6QiE-UBkJBEmrJDDweLLbbyhjnF8qlcP6O-t6G9CwY64h3znB7hYgtNJn7hHrsZeDVci3zH8UsvwVTHevYJwmZKz5VdLt6eVej_JUbLAIDTJYK81uZ6htqfN1USKJf2ImhBM22QxTHYvgdhzRO1JmFrEW5tSLQgSGPqPQclmtQcwnH9HCosW9BGWPkfYkKAPFCGdrk7R4xmTzTGLs9yVdO7xTKh_mg0Dc4aSmy53wEEuBhPMNh9C0sv9BD5J3tzf9o1avOl_xfg7GZ1vwtRs_jimmQK12fCRyDb3AjbXwmnCxKg"
+					}
+				],
+				"url": {
+					"raw": "https://api.moneyhub.co.uk/v2.0/transactions",
+					"protocol": "https",
+					"host": [
+						"api",
+						"moneyhub",
+						"co",
+						"uk"
+					],
+					"path": [
+						"v2.0",
+						"transactions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get_Transaction_By_ID",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlRxVk1laV9XdUtqZW5HWlJUbnJpeUxXRnZuS2tzTjNvLWFuWXBqS0JEbVUifQ.eyJqdGkiOiJ4SmJTfldDdjBFelpjM3cyNnZ6STAiLCJzdWIiOiI2MWJmMmU3MDBiMWE3NmVjNjY1NmY1MjAiLCJpc3MiOiJodHRwczovL2lkZW50aXR5Lm1vbmV5aHViLmNvLnVrL29pZGMiLCJpYXQiOjE2Mzk5MTkyNDQsImV4cCI6MTYzOTkyNjQ0NCwic2NvcGUiOiJvcGVuaWQgaWQ6MWZmZTcwNGQzOTYyOWE5MjljOGUyOTM4ODBmYjQ0OWEgYWNjb3VudHM6cmVhZCB0cmFuc2FjdGlvbnM6cmVhZDphbGwiLCJjbGFpbXMiOnsiaWRfdG9rZW4iOnsibWg6Y29uX2lkIjp7ImVzc2VudGlhbCI6dHJ1ZX19LCJyZWplY3RlZCI6W119LCJhdWQiOiJjZjM0ZGMyNS03OGM3LTRmYzEtYmYwYy1jYjU0MGI0ODA1ZDAifQ.RwkQVu7ip4AWCLCRy3_3STyyDZC6f_v3w1trApz6QiE-UBkJBEmrJDDweLLbbyhjnF8qlcP6O-t6G9CwY64h3znB7hYgtNJn7hHrsZeDVci3zH8UsvwVTHevYJwmZKz5VdLt6eVej_JUbLAIDTJYK81uZ6htqfN1USKJf2ImhBM22QxTHYvgdhzRO1JmFrEW5tSLQgSGPqPQclmtQcwnH9HCosW9BGWPkfYkKAPFCGdrk7R4xmTzTGLs9yVdO7xTKh_mg0Dc4aSmy53wEEuBhPMNh9C0sv9BD5J3tzf9o1avOl_xfg7GZ1vwtRs_jimmQK12fCRyDb3AjbXwmnCxKg"
+					}
+				],
+				"url": {
+					"raw": "https://api.moneyhub.co.uk/v2.0/transactions/f1ccebeb-d510-4c24-b276-81e05672ca57",
+					"protocol": "https",
+					"host": [
+						"api",
+						"moneyhub",
+						"co",
+						"uk"
+					],
+					"path": [
+						"v2.0",
+						"transactions",
+						"f1ccebeb-d510-4c24-b276-81e05672ca57"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Retrieve-Account-Holding",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlRxVk1laV9XdUtqZW5HWlJUbnJpeUxXRnZuS2tzTjNvLWFuWXBqS0JEbVUifQ.eyJqdGkiOiI2R1NoMHMzVjlISG1ybkRwbHdzT3EiLCJzdWIiOiI2MWJmMjU3NTc3MjgxNjgzMWU1ZDhhMjMiLCJpc3MiOiJodHRwczovL2lkZW50aXR5Lm1vbmV5aHViLmNvLnVrL29pZGMiLCJpYXQiOjE2Mzk5MTY5NjUsImV4cCI6MTYzOTkyNDE2NSwic2NvcGUiOiJvcGVuaWQgaWQ6MWZmZTcwNGQzOTYyOWE5MjljOGUyOTM4ODBmYjQ0OWEgYWNjb3VudHM6cmVhZCIsImNsYWltcyI6eyJpZF90b2tlbiI6eyJtaDpjb25faWQiOnsiZXNzZW50aWFsIjp0cnVlfX0sInJlamVjdGVkIjpbXX0sImF1ZCI6ImNmMzRkYzI1LTc4YzctNGZjMS1iZjBjLWNiNTQwYjQ4MDVkMCJ9.INmE-bLC2srLGHIWiQ4GDLDezGAWlcZ19I2yHNV9w8uMvqnY7jlZBpNWvWy8Xh9HjyHdXXEg8tdZmQLZ43d0SUd9oae_MTddGjfb_d0mQrxF9UjecFpO-fxGy4aEXw9vF5RgtdZsfAVFf0sfRsPvs7_whpXfo_WvxaaCjLzFGnJb4U6wDoU7PAD8gtjcxQ3ygOdH1xeOyjLK43dpMYxICU4VDaIg6Z8JWnA3xPww-eUn4fAz8dwnXGdJWmPoyPx_LGxUyvZlvOWnv3v1MYTykxzBxqQVNfYxfRnJaBS4GLkCUFuBtQPjEx7BrrGktYFRBMIHvzzUwyob5isAkisvaQ"
+					}
+				],
+				"url": {
+					"raw": "https://api.moneyhub.co.uk/v2.0/accounts/fcb7e00f-9a9e-4948-a507-1f7e349e240e/holdings",
+					"protocol": "https",
+					"host": [
+						"api",
+						"moneyhub",
+						"co",
+						"uk"
+					],
+					"path": [
+						"v2.0",
+						"accounts",
+						"fcb7e00f-9a9e-4948-a507-1f7e349e240e",
+						"holdings"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
